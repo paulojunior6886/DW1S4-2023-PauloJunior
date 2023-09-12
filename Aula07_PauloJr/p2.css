@@ -1,0 +1,51 @@
+table, th, td{
+    border: 1px solid black;
+}
+th, td{
+    text-align: center;
+    padding: 0px 10px; 
+}
+#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9, #c10{
+    padding: 0px 70px;
+}
+#c1{
+    background-color: red;
+}
+#c2{
+    background-color: #b30000;
+}
+#c3{
+    background-color: #600000;
+}
+#c4{
+    background-color: green;
+}
+#c5{
+    background-color: #99ff99;
+}
+#c6{
+    background-color: #004d00;
+}
+#c7{
+    background-color: blue;
+}
+#c8{
+    background-color: #ccccff;
+}
+#c9{
+    background-color: #000066;
+}
+
+div{
+    background-image: url("ifsp.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+body{
+    background-image: url("cores.png");
+    background-position: left bottom;
+    background-size: 50px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    min-height: 90vh;
+}

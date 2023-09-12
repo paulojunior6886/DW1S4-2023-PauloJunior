@@ -1,0 +1,21 @@
+body{
+    background-color: lightblue;
+    background-image: url("bmw.jpg");
+    background-position: right bottom;
+    background-position: 100% 100%;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+#d1{
+    background-color: rgb(252, 96, 96);
+}
+#d2{
+    color: blue;
+    background-image: url("BMWlogo.png");
+    background-repeat:repeat;
+    background-size: 50px; 
+}
+#d3{
+    background-color: lightgreen;
+}
