@@ -1,0 +1,29 @@
+.d1{
+    background-color: lightskyblue;
+    font-family: 'Dancing Script', cursive;
+}
+.d2{
+    background-color: lightgreen;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.d3{
+    background-color: aqua;
+    font-family: 'Lobster', cursive;
+}
+.d4{
+    background-color: darkorange;
+    font-family: 'Mate', serif;
+}
+.d5{
+    background-color: yellow;
+    font-family: 'Cookie', cursive;
+}
+span{
+    color:red
+}
+a{
+    font-family: 'Press Start 2P', cursive;
+    color: lightgreen;
+    font-size: 12px;
+    text-align: left;
+}
