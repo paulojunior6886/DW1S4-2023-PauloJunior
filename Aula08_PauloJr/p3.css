@@ -1,0 +1,15 @@
+.d1{
+    background-color: aqua;
+    border-right: 2vw solid tomato;
+    border-bottom: 1vw solid tomato;
+    text-indent: 20px;
+}
+img{
+    border: 2vw double magenta;
+    width: 300px;
+}
+.d2{
+    border: 1vw dotted maroon;
+    height: 250px;
+    width: 94vw;
+}

@@ -1,0 +1,22 @@
+.h1{
+    text-align: center;
+}
+.d1{
+    border: 1vw  solid;
+    font-size: 2vw;
+    width: 65%;
+    background-color: aliceblue;
+}
+
+.d2{
+    border: 6px solid;
+    font-size: 14px;
+    width: 620px;
+    background-color: aliceblue;
+}
+.h12{
+   text-align: center; 
+}
+body{
+    background-color: aqua;
+}
