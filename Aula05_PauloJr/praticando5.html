@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td{
+            border: solid 1px red
+        }
+        td{
+            padding: 30px 60px;
+            text-align: center;
+        }
+
+        .g1{
+            background-color: green;
+        }
+
+        .r1{
+            background-color: red;
+        }
+
+        .b1{
+            background-color: blue;
+        }
+
+        .y1{
+            background-color: yellow;
+        }
+
+
+        #t2 td{
+            padding: 3px 12px;
+        }
+        .g2{
+            background-color: green;
+        }
+        .r2{
+            background-color: red;
+        }
+        .b2{
+            background-color: blue;
+        }
+        .y2{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Praticando 5 - Tabela grande com colspan e rowspan</h1>
+        <p><a href="menuPrincipal.html">Voltar ao menu principal</a></p>
+    <table>
+        <caption>Tabela grande com colspan e rowspan</caption>
+    <tr class="g1">
+        <td colspan="2" >Colspan</td>
+        <td>-</td>
+        <td rowspan="3">Rowspan</td>
+    </tr>
+    <tr class="r1">
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr class="b1">
+        <td>-</td>
+        <td colspan="2">Colspan</td>
+    </tr>
+    <tr class="y1">
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    </table>
+
+    <br>
+
+    <table id="t2">
+        <caption>legenda</caption>
+        <tr>
+            <td>Linha 1</td>
+            <td class="g2">-------</td>
+            <td>green</td>
+        </tr>
+        <tr>
+            <td>Linha 2</td>
+            <td class="r2">-------</td>
+            <td>red</td>
+        </tr>
+        <tr>
+            <td>Linha 3</td>
+            <td class="b2">-------</td>
+            <td>blue</td>
+        </tr>
+        <tr>
+            <td>Linha 4</td>
+            <td class="y2">-------</td>
+            <td>yellow</td>
+        </tr>
+    </table>
+
+</body>
+</html>
