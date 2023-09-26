@@ -1,0 +1,55 @@
+.d1{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-left: 70vw;
+}
+.d2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-left: 8vw;
+}
+.d3{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-left: 8vw;
+}
+
+.d4{
+    margin-top: 50px;
+    width: 350px;
+    height: 100px;
+    background-color: green;
+    margin-left: 0vw;
+}
+.d5{
+    width: 350px;
+    height: 100px;
+    background-color: green;
+    margin-left: 25vw;
+}
+
+.d6{
+    margin-top: 50px;
+    width: 100px;
+    height: 300px;
+    background-color: green;
+    margin-left: 0vw;
+}
+.d7{
+    width: 100px;
+    height: 300px;
+    background-color: green;
+    margin-left: 78vw;
+}
+.d8{
+    width: 100px;
+    height: 300px;
+    background-color: green;
+    margin-left: 8vw;
+}
+body{
+    margin: 4vw;
+}

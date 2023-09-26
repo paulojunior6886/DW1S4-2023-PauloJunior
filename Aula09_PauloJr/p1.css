@@ -1,0 +1,19 @@
+.img1{
+    float: right;
+}
+.img2{
+    float: left;
+}
+.img3{
+    float: right;
+}
+p{
+    font-size: large;
+    text-align: justify;
+}
+.p5{
+    clear: left;
+}
+body{
+    margin: 50px;
+}
