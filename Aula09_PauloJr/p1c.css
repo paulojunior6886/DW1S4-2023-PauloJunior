@@ -1,0 +1,54 @@
+.flex-container{
+    display: flex;
+    justify-content: center;
+    background-color: lightgreen;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    padding: 5vw;
+}
+.flex-container > div{ 
+    align-self: center;
+}
+.title{
+    flex-basis:100%;
+}
+
+
+.flex-container-2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; 
+    border-top: solid green;
+    border-bottom: solid green;
+    border-right: solid green; 
+    width: 70%; 
+}
+.subtitle{
+    flex-basis: 100%;
+    text-align: left;
+    font-size:3vw;
+    margin: 1vw;
+}
+.flex-container-2 > div{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin: 1vw;
+    border: solid 1px black; 
+}
+
+
+.box-lateral{
+    display:flex;
+    width:30%;
+    border-top:solid green;
+    border-bottom: solid green;
+}
+
+
+.rodape{
+    background-color: lightgreen;
+    text-align: center;
+    border-top: solid green;
+}
+/*Falta a fonte!!!*/
