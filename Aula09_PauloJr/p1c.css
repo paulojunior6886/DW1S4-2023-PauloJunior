@@ -1,54 +1,94 @@
-.flex-container{
+/*Menu*/
+.flex-container {
     display: flex;
     justify-content: center;
-    background-color: lightgreen;
+    background-color: rgb(178, 245, 182);
     flex-flow: row wrap;
-    justify-content:space-between;
-    padding: 5vw;
+    justify-content: space-around;
+    border-bottom: solid rgb(14, 165, 25);
+    font-family: 'Montserrat', sans-serif;
 }
-.flex-container > div{ 
+
+.flex-container>div {
     align-self: center;
 }
-.title{
-    flex-basis:100%;
+
+.title {
+    flex-basis: 100%;
+    text-indent: 2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
-.flex-container-2{
-    display: flex;
+
+/*Corpo do site*/
+.flex-container-2 {
+    display: inline-block;
     flex-flow: row wrap;
-    justify-content: space-between; 
-    border-top: solid green;
-    border-bottom: solid green;
-    border-right: solid green; 
-    width: 70%; 
+    justify-content: flex-start;
+    border-right: solid rgb(14, 165, 25);
+    width: 80%;
+    height: 35vw;
+    font-size: 1vw;
+    font-family: 'Montserrat', sans-serif;
 }
-.subtitle{
+
+.subtitle {
     flex-basis: 100%;
     text-align: left;
-    font-size:3vw;
+    font-size: 2vw;
     margin: 1vw;
+    font-family: 'Montserrat', sans-serif;
 }
-.flex-container-2 > div{
-    height: 100px;
-    width: 100px;
+
+.flex-container-2>div {
+    display: inline-block;
+    height: 8vw;
+    width: 10vw;
     text-align: center;
     margin: 1vw;
-    border: solid 1px black; 
+    border: solid 1px black;
+    font-size: 1vw;
+}
+.num{
+    font-size: 2vw;
 }
 
 
-.box-lateral{
-    display:flex;
-    width:30%;
-    border-top:solid green;
-    border-bottom: solid green;
+/*Box Lateral*/
+.box-lateral {
+    width: 19%;
+    height: 30vw;
+    float: right;
+    font-size: 1.5vw;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
 }
 
+.box-lateral .lorem {
+    font-size: 0.8vw;
+    margin: 1vw;
+    text-indent: 3vw;
+    line-height: 2vw;
+}
 
-.rodape{
-    background-color: lightgreen;
+#box-lateral {
     text-align: center;
-    border-top: solid green;
 }
-/*Falta a fonte!!!*/
+
+/*Rodapé*/
+.rodape {
+    background-position: center;
+    background-color: rgb(178, 245, 182);
+    text-align: center;
+    border-top: solid rgb(14, 165, 25);
+    padding: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*fonte!!!*/
