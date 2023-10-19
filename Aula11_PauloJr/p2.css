@@ -1,6 +1,39 @@
-body{
+.flex-container{
+    display: flex;
+    justify-content:center;
+    align-items: right;
+    background-image: url(pc.jpg);
     background-repeat: no-repeat;
-    background-size:100px;
-    background-position: center;
-    
+    background-size: 100px;
+    background-position: right;
+}
+
+.flex-container > .flex-item{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+
+input[type="text"], input[type="email"], select, textarea {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*#nome, #email, #carros, #obs{
+     display: flex;
+}*/
+body{
+    background-color: rgb(60, 173, 179);
+    min-height: 100%;
+}
+button{
+    margin: 2vw ;
+    background-color: lightblue;
+    padding: 1vw;
+    border: solid black;
+    border-radius: 5px;
+    font-size: medium;
+    text-align: center;
+}
+#obs{
+    border-radius: 5px;
 }
