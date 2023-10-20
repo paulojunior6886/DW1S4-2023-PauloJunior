@@ -11,67 +11,48 @@
 <body>
 
     <h1>Praticando 2 - Formulário HTML Estilizado</h1>
-    <div class="flex-container">
+    <button type="link" value="Enviar" ><a href="praticando1.html"><b>Praticando anterior</b></a></button>
+    <button type="submit" value="Enviar"><a href="index.html"><b>Voltar ao menu</b></a></button>
+    <div style="margin-top: 30px;" class="container">
+        <form method="POST" action="">
+
+            
+            <label for="nome" class="hora">Nome</label><input type="text" id="nome" name="nome"><br>
+            <label for="email" class="hora">E-mail</label><input type="email" id="email" name="email"
+                placeholder="seu@email.aqui"><br>
+            <label for="carros" class="hora">Marca de Carro favorita</label><select name="carros" id="carros">
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="porsche">Porsche</option>
+            </select>
+            <br>
+            <label for="obs" class="hora">Observações</label><textarea id="obs" name="obs" rows="4"
+                cols="30"></textarea><br><br>
 
 
+            <label class="hora" for="LinguagemP">Linguagem Web Favorita</label><input type="radio" id="html" name="linguagem_pref"
+                value="HTML">
+            <label for="html"><img src="html.png" width="60vw"></label><input type="radio" id="css"
+                name="linguagem_pref" value="CSS">
+            <label for="css"><img src="css.png" width="60vw"></label>
+            <input type="radio" id="javascript" name="linguagem_pref" value="JavaScript">
+            <label for="javascript"><img src="js.png" width="60vw"></label><br>
 
-        <div class="flex-item">
+            <label for="filme" class="hora">Filmes que eu quero ver quando lançar:</label><input type="checkbox" id="filme1" name="filme1" value="Kung Fu Panda 4">
+            <label for="filme1"><a href="https://www.google.com/search?client=opera-gx&q=kung+fu+panda+4&sourceid=opera&ie=UTF-8&oe=UTF-8&bshm=rime/1">Kung Fu Panda 4</a></label><br>
 
-            <form method="post" action="">
-                <div class="d1">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome">
-                    <br>
+            <input type="checkbox" id="filme2" name="filme2" value="Capitão América: Nova Ordem Mundial">
+            <label for="filme2"><a href="https://www.google.com/search?q=capit%C3%A3o+america+nova+ordem+mundial+hq&client=opera-gx&hs=R1v&sca_esv=574891262&ei=cGoxZcmfG42H4dUP5aSBwAk&gs_ssp=eJzj4tVP1zc0LDY1N64yNLIwYPRSS04syCw5vDhfITE3tSgzOVEhL78sUSG_KCU1VyG3NC8lMzFHIaMQAO41Eu0&oq=capit%C3%A3o+america+nova+&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmNhcGl0w6NvIGFtZXJpY2Egbm92YSAqAggAMgUQLhiABDIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yFBAuGIAEGJcFGNwEGN4EGOAE2AEDSPwhUPAFWLUTcAF4AZABAJgBdaABjAWqAQMwLja4AQHIAQD4AQHCAgoQABhHGNYEGLADwgIKEAAYigUYsAMYQ8ICDhAAGOQCGNYEGLAD2AEBwgIQEC4YigUYyAMYsAMYQ9gBAsICExAuGIoFGNQCGMgDGLADGEPYAQLCAgcQABiKBRhD4gMEGAAgQYgGAZAGE7oGBggBEAEYCboGBggCEAEYCLoGBggDEAEYFA&sclient=gws-wiz-serp&bshm=rime/1">Capitão América: N.O.M</a></label><br>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seu@email.aqui">
-                    <br>
+            <input type="checkbox" id="filme3" name="filme3" value="Garfield">
+            <label for="filme3"><a href="https://www.google.com/search?q=garfield+2024&client=opera-gx&hs=h5v&sca_esv=574891262&biw=1495&bih=723&ei=eGsxZZ_jL8HZ1sQPt7eLuAU&gs_ssp=eJzj4tVP1zc0zMotLC9PKTQwYPTiTU8sSstMzUlRMDIwMgEAk1wJKA&oq=garfield&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGdhcmZpZWxkKgIIATIHEC4YigUYQzINEC4YigUYsQMYgwEYQzIIEC4YsQMYgAQyCBAuGLEDGIAEMgoQLhiKBRixAxhDMgUQABiABDILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEC4YgAQyHBAuGIoFGLEDGIMBGEMYlwUY3AQY3gQY4ATYAQNI1UVQ8AtYxilwAngBkAECmAGJAaABrwyqAQQxLjEzuAEByAEA-AEBqAIUwgIKEAAYRxjWBBiwA8ICChAAGIoFGLADGEPCAg4QABjkAhjWBBiwA9gBAcICEBAuGIoFGMgDGLADGEPYAQLCAggQLhiABBixA8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIXEC4YsQMYgAQYlwUY3AQY3gQY4ATYAQPCAgsQLhiABBixAxiDAcICGRAuGIoFGLEDGEMYlwUY3AQY3gQY4ATYAQPCAgsQABiKBRixAxiDAcICERAuGIAEGLEDGIMBGMcBGNEDwgIWEC4YigUYQxiXBRjcBBjeBBjgBNgBA8ICEBAuGIoFGOoCGLQCGEPYAQTCAhAQABiKBRjqAhi0AhhD2AEEwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBBcICFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQXiAwQYACBBiAYBkAYTugYGCAEQARgJugYGCAIQARgIugYGCAMQARgUugYECAQYB7oGBggFEAEYCg&sclient=gws-wiz-serp&bshm=rime/1">Garfield</a></label><br>
 
-                    <label for="marcaCarro">Marca de carro preferida</label>
-                    <select name="carros" id="carros">
-                        <option value="bmw">BMW</option>
-                        <option value="audi">Audi</option>
-                        <option value="ferrari">Ferrari</option>
-                        <option value="porsche">Porsche</option>
-                    </select>
-                    <br>
+            <input type="checkbox" id="filme4" name="filme4" value="Deadpool 3">
+            <label for="filme4"><a href="https://www.google.com/search?client=opera-gx&hs=91v&sca_esv=574891262&si=ALGXSlZZLz93Q5j8HVkpXyxpTaoqXw8cocmoi-DFAGsSj5diF0to5HYxajs0izqv0vtMvAY84goXbiG-gec4grlA174ETCbf13z-77t0Va0Px_QHgxSclQsUqV7___AgozjEAE6DYmdDbEkSdUukk4b-yXSAoL2bguv5OpMs4BN0XA-QTFDStf09OxVE7wAwN4Pp1zGKUC20RrfE8BwKypSNG-UCwnDPhFfBuG2RuPHhA5Ru1VVbME9miEXaHWefX_Fga01rS6po6WIKgYFcIwW1wQaxrlpu-kBiZs_uQFoKVWS5-4HchjxQR4FxSLwIHmgFoCJ7SPwO&q=Deadpool+3&sa=X&ved=2ahUKEwiJ4JjI1IKCAxU3qZUCHU6kCxgQs9oBKAB6BAgSEAI&biw=1495&bih=723&dpr=1.25&bshm=rime/1">Deadpool 3</a></label><br>
 
-                    <label for="obs">Observações</label>
-                    <textarea id="obs" name="obs" rows="4" cols="30">
-
-        </textarea>
-                </div>
-                <br><br>
-
-                <div class="d2">
-                <label for="LinguagemP">Linguagem Web preferida:</label>
-                <input type="radio" id="html" name="linguagem_pref" value="HTML">
-                <label for="html"><img src="html.png" width="50vw"></label>
-
-                <input type="radio" id="css" name="linguagem_pref" value="CSS">
-                <label for="css"><img src="css.png" width="50vw"></label>
-
-                <input type="radio" id="javascript" name="linguagem_pref" value="JavaScript">
-                <label for="javascript"><img src="js.png" width="50vw"></label>
-
-                <br><br>
-
-
-                <label for="filme">Filmes que eu quero ver quando lançar:</label>
-                <input type="checkbox" id="filme1" name="filme1" value="Kung Fu Panda 4">
-                <label for="filme1"><a href="https://www.google.com/search?client=opera-gx&q=kung+fu+panda+4&sourceid=opera&ie=UTF-8&oe=UTF-8&bshm=rime/1">Kung Fu Panda 4</a></label><br>
-
-                <input type="checkbox" id="filme2" name="filme2" value="Capitão América: Nova Ordem Mundial">
-                <label for="filme2"><a href="https://www.google.com/search?q=capit%C3%A3o+america+nova+ordem+mundial+hq&client=opera-gx&hs=R1v&sca_esv=574891262&ei=cGoxZcmfG42H4dUP5aSBwAk&gs_ssp=eJzj4tVP1zc0LDY1N64yNLIwYPRSS04syCw5vDhfITE3tSgzOVEhL78sUSG_KCU1VyG3NC8lMzFHIaMQAO41Eu0&oq=capit%C3%A3o+america+nova+&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmNhcGl0w6NvIGFtZXJpY2Egbm92YSAqAggAMgUQLhiABDIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yFBAuGIAEGJcFGNwEGN4EGOAE2AEDSPwhUPAFWLUTcAF4AZABAJgBdaABjAWqAQMwLja4AQHIAQD4AQHCAgoQABhHGNYEGLADwgIKEAAYigUYsAMYQ8ICDhAAGOQCGNYEGLAD2AEBwgIQEC4YigUYyAMYsAMYQ9gBAsICExAuGIoFGNQCGMgDGLADGEPYAQLCAgcQABiKBRhD4gMEGAAgQYgGAZAGE7oGBggBEAEYCboGBggCEAEYCLoGBggDEAEYFA&sclient=gws-wiz-serp&bshm=rime/1">Capitão América: Nova Ordem Mundial</a></label><br>
-
-                <input type="checkbox" id="filme3" name="filme3" value="Garfield">
-                <label for="filme3"><a href="https://www.google.com/search?q=garfield+2024&client=opera-gx&hs=h5v&sca_esv=574891262&biw=1495&bih=723&ei=eGsxZZ_jL8HZ1sQPt7eLuAU&gs_ssp=eJzj4tVP1zc0zMotLC9PKTQwYPTiTU8sSstMzUlRMDIwMgEAk1wJKA&oq=garfield&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGdhcmZpZWxkKgIIATIHEC4YigUYQzINEC4YigUYsQMYgwEYQzIIEC4YsQMYgAQyCBAuGLEDGIAEMgoQLhiKBRixAxhDMgUQABiABDILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEC4YgAQyHBAuGIoFGLEDGIMBGEMYlwUY3AQY3gQY4ATYAQNI1UVQ8AtYxilwAngBkAECmAGJAaABrwyqAQQxLjEzuAEByAEA-AEBqAIUwgIKEAAYRxjWBBiwA8ICChAAGIoFGLADGEPCAg4QABjkAhjWBBiwA9gBAcICEBAuGIoFGMgDGLADGEPYAQLCAggQLhiABBixA8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIXEC4YsQMYgAQYlwUY3AQY3gQY4ATYAQPCAgsQLhiABBixAxiDAcICGRAuGIoFGLEDGEMYlwUY3AQY3gQY4ATYAQPCAgsQABiKBRixAxiDAcICERAuGIAEGLEDGIMBGMcBGNEDwgIWEC4YigUYQxiXBRjcBBjeBBjgBNgBA8ICEBAuGIoFGOoCGLQCGEPYAQTCAhAQABiKBRjqAhi0AhhD2AEEwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBBcICFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQXiAwQYACBBiAYBkAYTugYGCAEQARgJugYGCAIQARgIugYGCAMQARgUugYECAQYB7oGBggFEAEYCg&sclient=gws-wiz-serp&bshm=rime/1">Garfield</a></label><br>
-
-                <input type="checkbox" id="filme4" name="filme4" value="Deadpool 3">
-                <label for="filme4"><a href="https://www.google.com/search?client=opera-gx&hs=91v&sca_esv=574891262&si=ALGXSlZZLz93Q5j8HVkpXyxpTaoqXw8cocmoi-DFAGsSj5diF0to5HYxajs0izqv0vtMvAY84goXbiG-gec4grlA174ETCbf13z-77t0Va0Px_QHgxSclQsUqV7___AgozjEAE6DYmdDbEkSdUukk4b-yXSAoL2bguv5OpMs4BN0XA-QTFDStf09OxVE7wAwN4Pp1zGKUC20RrfE8BwKypSNG-UCwnDPhFfBuG2RuPHhA5Ru1VVbME9miEXaHWefX_Fga01rS6po6WIKgYFcIwW1wQaxrlpu-kBiZs_uQFoKVWS5-4HchjxQR4FxSLwIHmgFoCJ7SPwO&q=Deadpool+3&sa=X&ved=2ahUKEwiJ4JjI1IKCAxU3qZUCHU6kCxgQs9oBKAB6BAgSEAI&biw=1495&bih=723&dpr=1.25&bshm=rime/1">Deadpool 3</a></label><br>
-
-                <button type="submit" value="Enviar"><b>Enviar</b></button>
-                <button type="reset" value="Limpar"><b>Limpar</b></button>
+            <button type="submit" value="Enviar"><b>Enviar</b></button>
+            <button type="reset" value="Limpar"><b>Limpar</b></button>
             </div>
         </form>
         </div>

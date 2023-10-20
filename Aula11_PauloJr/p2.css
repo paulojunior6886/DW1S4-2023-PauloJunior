@@ -1,26 +1,32 @@
-.flex-container{
+label.hora {
+    display: inline-block;
+    width: 288px;
+    padding-top: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    text-align: right;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    width:bold;
+}
+h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+#carros{
+    margin-bottom: 1vw;
+}
+#filme2, #filme3, #filme4{
+    display: inline-block;
+    margin-left: 53.9%;
+    width: 20px;
+}
+.container {
     display: flex;
-    justify-content:center;
-    align-items: right;
+    justify-content: center;
     background-image: url(pc.jpg);
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: right;
 }
-
-.flex-container > .flex-item{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-}
-
-
-input[type="text"], input[type="email"], select, textarea {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-/*#nome, #email, #carros, #obs{
-     display: flex;
-}*/
 body{
     background-color: rgb(60, 173, 179);
     min-height: 100%;
@@ -34,6 +40,4 @@ button{
     font-size: medium;
     text-align: center;
 }
-#obs{
-    border-radius: 5px;
-}
+
