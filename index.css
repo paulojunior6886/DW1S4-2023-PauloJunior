@@ -1,0 +1,28 @@
+.container{
+    display: flexbox;
+    justify-content: center;
+    margin-left: 35%;
+    margin-top: 5%;
+    padding-top: 0.2vw;
+    height: 40vw;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 50px;
+    background-color: lightblue;
+    width: 30vw;
+    text-align: center;
+}
+button{
+    margin: 0.2vw;
+    background-color: aliceblue;
+    border: solid rgb(197, 197, 255);
+    border-radius: 10px;
+    width: 10vw;
+    height: 2.5vw;
+}
+body{
+    background-color: rgb(69, 188, 228);
+    text-align: center;
+    color: rgb(102, 102, 255);
+    background-image: url(tech2.jpg);
+    background-repeat: no-repeat;
+}
