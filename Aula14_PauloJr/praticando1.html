@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,27 @@
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
 
-    <form>
-        <label id="num1">Número 1</label><br>
-        <input type="text"> <br><br>
-
-        <label id="num2">Número 2</label><br>
-        <input type="text"> <br><br>
-
-        <label id="result">Resultado</label><br>
-        <input type="text" id="button"> <br>
-
-        <button onclick="document.getElementById(button).innerHTML = somarNums()">somar</button>
-
-
-    </form>
-
     <script>
-        var btn = document.querySelector('button');
+        // Fazendo o confirm para pedir o nome
+        let nome = prompt("Por favor, insira seu nome:");
 
-        function somarNums(){
-            var num1 = document.getElementById("num1").value;
-            var num2 = document.getElementById("num2").value;
+        // Verificando se o nome foi inserido
+        if (nome != null && nome != "") {
+            // Exibindo o nome no HTML
+            document.getElementById("nome").innerHTML = "Nome: " + nome;
+        } else {
+            // Exibindo mensagem de erro no HTML caso o nome não seja inserido
+            document.getElementById("nome").innerHTML = "Erro: Por favor, insira seu nome.";
         }
 
-        btn.onclick = somarNums
     </script>
+    
+    <h1>Praticando 1 - JavaScript</h1>
+    <p id="nome"></p> 
+
 </body>
+
 </html>
