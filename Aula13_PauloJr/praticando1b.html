@@ -10,10 +10,10 @@
 
     <style>
         body {
-            background-color: #3533CD;
+            background-image: url(fundo.jpg);
         }
-    
-    /*.container{
+
+        /*.container{
         background-color: rgb(44, 131, 207);
         width: 800px;
         height: 400px;
@@ -21,109 +21,129 @@
         border-radius: 20px;
         font-family: Arial, Helvetica, sans-serif;
     }*/
-
     </style>
-    
+
 
 </head>
 
 <body>
 
 
-    
-        <img src="Front.png" width="100px">
-<div class="container">
-    <p class="fs-2">Trabalhe conosco:</p>
-        <form action="/submit_form" method="post" class="col-12">
-            <div class="row">
 
-                <div class="col">
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome"><br>
-                
+    <img src="Front.png" width="100px">
+    <div class="container">
+        <p class="fs-2">Trabalhe conosco:</p>
+        <form action="/submit_form" method="post" class="row g-3">
 
-                
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" id="email" name="email"><br>
-                
 
-                
-                    <label for="telefone">Telefone:</label><br>
-                    <input type="tel" id="telefone" name="telefone"><br>
-               
 
-                
-                    <label for="url">Linkedin:</label><br>
-                    <input type="url" id="url" name="url"><br>
-                
+            <div class="col-2">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" class="form-control"><br>
+            </div>
+            <div class="col-4">
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" class="form-control"><br>
+            </div>
+            <div class="col-2">
+                <label for="telefone">Telefone:</label><br>
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(xx)xxxxx-xxxx"><br>
 
-                
-                    <label for="numero">Número:</label><br>
-                    <input type="number" id="numero" name="numero"><br>
-               
-
-                
-                    <label for="data">Data de nascimento:</label><br>
-                    <input type="date" id="data" name="data"><br>
-                </div>
-            
-       
-
-        
-
-                <div class="col">
-                    <label for="arquivo">Insira seu currículo:</label><br>
-                    <input type="file" id="arquivo" name="arquivo"><br>
-                
-
-                
-                    <label for="lista">Escolaridade:</label><br>
-                    <select id="lista" name="lista">
-                        <option value="opcao1">Ensino Fundamental Incompleto</option>
-                        <option value="opcao2">Ensino Fundamental Completo</option>
-                        <option value="opcao3">Ensino Médio Incompleto</option>
-                        <option value="opcao4">Ensino Médio Completo</option>
-                        <option value="opcao5">Ensino Superior Inconpleto</option>
-                        <option value="opcao6">Ensino Superior Completo</option>
-                        <option value="opcao7">Ensino Técnico</option>
-                        <option value="opcao8">Doutorado</option>
-                        <option value="opcao9">Mestrado</option>
-                        <option value="opcao3"></option>
-                    </select><br>
-                
-
-                
-                    <label for="texto_longo">O que você espera trabalhando conosco?</label><br>
-                    <textarea id="texto_longo" name="texto_longo"></textarea><br>
-                
-
-                
-                    <label for="check1">Checkbox única:</label><br>
-                    <input type="checkbox" id="check1" name="check1"><br>
-                    <label for="check1">Checkbox única:</label><br>
-                    <input type="checkbox" id="check1" name="check1"><br>
-                    <label for="check1">Checkbox única:</label><br>
-                    <input type="checkbox" id="check1" name="check1"><br>
-
-               
-
-                
-                    <label for="check2">Checkbox múltipla 1:</label><br>
-                    <input type="checkbox" id="check2" name="check2"><br>
-                
-
-                
-                    <label for="check3">Checkbox múltipla 2:</label><br>
-                    <input type="checkbox" id="check3" name="check3"><br>
-                </div>
-</div>
             </div>
 
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+            <div class="col-4">
+                <label for="url">Linkedin:</label><br>
+                <input type="url" id="url" name="url" class="form-control"><br>
+            </div>
 
-        </form>
+            <div class="col-4">
+                <label for="numero">Número:</label><br>
+                <input type="number" id="numero" name="numero" class="form-control" class="form-control"><br>
+            </div>
+
+            <div class="col-4">
+                <label for="data">Data de nascimento:</label><br>
+                <input type="date" id="data" name="data" class="form-control"><br>
+            </div>
+
+            <div class="col-4">
+                <div>
+                    <label for="arquivo">Insira seu currículo:</label><br>
+                    <input type="file" id="arquivo" name="arquivo" class="form-control"><br>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-4">
+                <label for="lista">Escolaridade:</label><br>
+                <select id="lista" name="lista" class="form-select">
+                    <option value="opcao1">Ensino Fundamental Incompleto</option>
+                    <option value="opcao2">Ensino Fundamental Completo</option>
+                    <option value="opcao3">Ensino Médio Incompleto</option>
+                    <option value="opcao4">Ensino Médio Completo</option>
+                    <option value="opcao5">Ensino Superior Inconpleto</option>
+                    <option value="opcao6">Ensino Superior Completo</option>
+                    <option value="opcao7">Ensino Técnico</option>
+                    <option value="opcao8">Doutorado</option>
+                    <option value="opcao9">Mestrado</option>
+                    <option value="opcao3"></option>
+                </select><br>
+            </div>
+
+
+            <div class="col-6">
+                <label for="texto_longo">O que você espera trabalhando conosco?</label><br>
+                <textarea id="texto_longo" name="texto_longo" class="form-control">
+
+
+                </textarea><br>
+            </div>
+
+
+            <div class="col-4">
+            <label>Renda familiar</label><br>
+
+            <input type="radio" id="radio1" name="radio">
+            <label for="radio1">De: 0 a 1 salário mínimo  </label><br>
+
+            <input type="radio" id="radio2" name="radio">
+            <label for="radio">De: 1 a 3 salários mínimos</label><br>
+
+            <input type="radio" id="radio" name="radio">
+            <label for="radio3">De: 3 ou mais salários mínimos</label>
+
+            </div>
+
+
+
+                <div class="col-4">
+                <label>Qual das principais linguagens de programação você conhece?</label><br>
+    
+                <input type="checkbox" id="check1" name="check1">
+                <label for="html"><img src="html.png" width="60vw"></label>
+    
+                <input type="checkbox" id="check1" name="check2">
+                <label for="css"><img src="css.png" width="60vw"></label>
+    
+                <input type="checkbox" id="check1" name="check3">
+                <label for="javascript"><img src="js.png" width="60vw"></label>
+    
+                </div>
     </div>
+
+    </div>
+
+    <button class="btn btn-primary" type="submit" value="Enviar"><a href="sobreEmpresa.html"
+            style="color: aliceblue;">Enviar</a></button>
+    <input type="reset" class="btn btn-primary" value="Limpar">
+
+    </form>
+    </div>
+
+
 </body>
 
 </html>
