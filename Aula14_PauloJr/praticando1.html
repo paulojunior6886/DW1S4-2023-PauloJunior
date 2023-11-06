@@ -7,27 +7,86 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    body{
+        margin-left:10% ;
+    }
+    button{
+        margin-top: 10px;
+        width: 400px;
+        height: 50px;
+        text-align: justify;
+        border: solid blue;
+        background-color: rgb(194, 224, 250);
+    }
+</style>
+
 </head>
 
 <body>
 
-    <script>
-        // Fazendo o confirm para pedir o nome
-        let nome = prompt("Por favor, insira seu nome:");
 
-        // Verificando se o nome foi inserido
-        if (nome != null && nome != "") {
-            // Exibindo o nome no HTML
-            document.getElementById("nome").innerHTML = "Nome: " + nome;
-        } else {
-            // Exibindo mensagem de erro no HTML caso o nome não seja inserido
-            document.getElementById("nome").innerHTML = "Erro: Por favor, insira seu nome.";
+
+    <h1>Praticando 1 - JavaScript</h1>
+    
+
+    <button onclick="pedirNome()" class="fs-5">Clique aqui</button>
+
+    <script>
+
+        function pedirNome() {
+            let name = prompt("Por favor, insira o seu nome:");
+            if (name != null) {
+                document.getElementById("nome").innerHTML = "Seja bem vindo, " + name + "!";
+            }
         }
 
     </script>
+
+    <h2 id="nome"></h2>
+
+
+    <script>
+        function addParagrafo() {
+            // Passo 1: Identificar o elemento que contém os parágrafos
+            let paragrafos = document.getElementById("paragrafos");
+
+            // Passo 2: Criar um novo elemento de parágrafo
+            let paragrafo = document.createElement("p");
+
+            // Passo 3: Definir o conteúdo do parágrafo
+            let paragrafoAdicionado = document.createTextNode("Este é um novo parágrafo.");
+
+            // Passo 4: Adicionar o conteúdo do parágrafo ao elemento de parágrafo criado
+            paragrafo.appendChild(paragrafoAdicionado);
+
+            // Passo 5: Adicionar o elemento de parágrafo ao elemento que contém os parágrafos
+            paragrafos.appendChild(paragrafo);
+        }
+
+        function removerParagrafo() {
+            let element = document.getElementById("paragrafos");
+            element.remove();
+        }
+    </script>
+    <button onclick="addParagrafo()" >Adicionar Parágrafo (Este é um novo parágrafo)</button><br>
+    <button onclick="removerParagrafo()">Remover Parágrafo (Remover todos os parágrafos)</button>
+    <div id="paragrafos">
+        
+    </div>
+
     
-    <h1>Praticando 1 - JavaScript</h1>
-    <p id="nome"></p> 
+    <a href="index.html">
+        <button class="btn btn-outline-success" type="button" onclick="window.location.href='index.html'">
+            Menu Principal
+        </button>
+    </a><br>
+    <a href="praticando2.html">
+        <button class="btn btn-outline-success" type="button" onclick="window.location.href='praticando2.html'">
+            Praticando 2 - JavaScript - Mini Calculadora
+        </button>
+    </a>
 
 </body>
 

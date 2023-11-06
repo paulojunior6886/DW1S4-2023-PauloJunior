@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* #d1 {
+            width: 150px;
+            height: 50px;
+            background-color: green;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }
+
+        #d2 {
+            background-color: yellow;
+            width: 150px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }
+
+        #d3 {
+            background-color: blue;
+            width: 150px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }
+
+        #d4 {
+            background-color: turquoise;
+            width: 150px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }
+
+        #d5 {
+            background-color: aqua;
+            width: 150px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }*/
+
+        /*Resumido*/
+        .caixa {
+            width: 200px;
+            height: 70px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }
+
+        #reset {
+            width: 100px;
+            margin: 40px;
+        }
+
+        #preview {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            text-align: center;
+            font-size: 80px;
+            padding-top: 20%;
+            display: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
+        <a href="praticando2.html">
+            <button class="btn btn-outline-success" type="button" onclick="window.location.href='praticando2.html'">
+                Praticando 2 - JavaScript - Mini Calculadora
+            </button>
+        </a>
+        
+        <div class="row">
+
+            <div class="caixa" id="d1" style="background-color: green;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d2" style=" background-color: yellow;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d3" style="background-color: blue;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d4" style="background-color: turquoise;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d5" style="background-color: orange;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+
+            <div onclick="resetarCorFundo()" id="reset"><button>Reset</button></div>
+        </div>
+
+    </div>
+
+
+    <div id="preview"><h2>Preview</h2></div>
+
+
+
+
+    <script>
+        var corOriginal = document.body.style.backgroundColor;
+
+        function mudarCorFundo(element) {
+            document.body.style.backgroundColor = element.style.backgroundColor;
+        }
+
+        function mostrarPreview(element) {
+            var preview = document.getElementById("preview");
+            preview.innerText = "Preview";
+            preview.style.backgroundColor = element.style.backgroundColor;
+            preview.style.display = "block";
+        }
+
+        function resetarCorFundo() {
+            document.body.style.backgroundColor = corOriginal;
+        }
+
+        document.body.onmouseout = function () {
+            var preview = document.getElementById("preview");
+            preview.style.display = "none";
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
