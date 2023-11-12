@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo 1</h1> <a href="exemplo2.html">exemplo2</a><br><br>
+
+    <!-- Título para exibir o nome -->
+    <h1 id="nome-titulo"></h1>
+
+     <!-- Botões para adicionar elementos -->
+    <button type="button" onclick="adicionarPr()">Adicionar parágrafos</button>
+    <button type="button" onclick="adicionarImg()">Adicionar Imagens</button>
+
+    <!-- Botões para remover elementos -->
+    <button type="button" onclick="removerPr()">Remover um Parágrafo</button>
+    <button type="button" onclick="removerImg()">Remover uma Imagem</button>
+    <button type="button" onclick="removerTudo()">Remover Tudo</button>
+
+    <!-- Container para elementos adicionados -->
+    <div id="box"></div>
+
+    <script>
+        function adicionarPr() {
+            // Adiciona um novo parágrafo
+            document.querySelector("#box").innerHTML += '<p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>';
+        }
+
+        function adicionarImg() {
+            // Adiciona uma nova imagem
+            document.querySelector("#box").innerHTML += '<img src="html.png" width="50px">';
+        }
+
+        function removerPr() {
+            // Remove o último parágrafo, se houver
+            const paragrafos = document.querySelectorAll('#box p');
+            if (paragrafos.length > 0) {
+                document.querySelector('#box').removeChild(paragrafos[paragrafos.length - 1]);
+            }
+        }
+
+        function removerImg() {
+            // Remove a última imagem, se houver
+            const imagens = document.querySelectorAll('#box img');
+            if (imagens.length > 0) {
+                document.querySelector('#box').removeChild(imagens[imagens.length - 1]);
+            }
+        }
+
+        function removerTudo() {
+            // Remove todo o conteúdo dentro da div com id "box"
+            document.querySelector("#box").innerHTML = ''; // Remove todo o conteúdo dentro da div com id "box"
+        }
+
+        function solicitarNome() {
+            const nome = prompt('Por favor, insira seu nome:');
+            if (nome) {
+                document.getElementById('nome-titulo').textContent = 'Olá, meu nome é ' + nome;
+            }
+        }
+
+        // Chamar a função solicitarNome ao carregar a página
+        window.onload = solicitarNome;
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="praticando2.html"><h3>Praticando 2</h3></a> <br>
+    <h1>Praticando 1 - Lâmpada</h1>
+
+    <div id="img">
+        <img src="lampada.png" alt="Lâmpada apagada" onmouseover="lampadaAc()" onmouseout="lampadaAp()">
+        <h3 id="lp">Lâmpada Apagada</h3>
+    </div>
+    
+    <script>
+
+        function lampadaAc(){
+            document.body.style.backgroundColor = 'white';
+            document.querySelector("#lp").textContent = 'Lâmpada Acesa';
+            document.querySelector("#lp").style.color = 'black';
+            document.querySelector("#img img").src = 'lampada-acesa.png';
+            document.querySelector("h1").style.color = 'black';
+        }
+
+        function lampadaAp(){
+            document.body.style.backgroundColor = 'black';
+            document.querySelector("#lp").textContent = 'Lâmpada Apagada';
+            document.querySelector("#lp").style.color = 'white';
+            document.querySelector("#img img").src = 'lampada.png';
+            document.querySelector("h1").style.color = 'white';
+        }
+
+    </script>
+
+</body>
+</html>
