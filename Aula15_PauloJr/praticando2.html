@@ -16,43 +16,65 @@
 </head>
 
 <body>
-<a href="testes.html">testes</a>
+    <a href="testes.html">testes</a>
+    <a href="praticando3.html">p3</a>
     <h1>Praticando 2 - Formulário com Validações</h1><br><br>
-    <form class="row g-4">
+    <form class="was-validated">
 
         <div class="row">
 
             <div class="col-3">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" class="form-control"><br>
+                <input type="text" id="nome" name="nome" class="form-control" required>
+                <div class="invalid-feedback">
+                    Insira seu nome
+                </div>
+                <br>
 
                 <label for="telefone">Telefone:</label><br>
-                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(xx)xxxxx-xxxx"><br>
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(xx)xxxxx-xxxx"
+                    required>
+                <div class="invalid-feedback">
+                    Insira seu telefone
+                </div>
             </div>
 
             <div class="col-3">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control"><br>
+                <input type="email" id="email" name="email" class="form-control" required>
+                <div class="invalid-feedback">
+                    Insira um e-mail válido
+                </div><br>
 
-                <label for="idade">Idade</label><br>
-                <select id="idade" name="idade" class="form-select">
-                    <option value="opcao">Selecione:</option>
-                    <option value="opcao1">0 a 11 anos</option>
-                    <option value="opcao2">12 a 17 anos</option>
-                    <option value="opcao3">18 a 24 anos</option>
-                    <option value="opcao4">25 a 44 anos</option>
-                    <option value="opcao5">45 a 64 anos</option>
-                    <option value="opcao6">65 anos ou mais</option>
-                </select>
+                <div class="mb-3">
+                    <label for="idade">Idade</label><br>
+                    <select class="form-select" required aria-label="selecione" id="idade" name="idade">
+                        <option value="">Selecione:</option>
+                        <option value="opcao1">0 a 11 anos</option>
+                        <option value="opcao2">12 a 17 anos</option>
+                        <option value="opcao3">18 a 24 anos</option>
+                        <option value="opcao4">25 a 44 anos</option>
+                        <option value="opcao5">45 a 64 anos</option>
+                        <option value="opcao6">65 anos ou mais</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecione uma idade válida
+                    </div><br>
+                </div>
+
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <label for="text-area">Observações:</label><br>
                 <textarea class="form-control" id="obs" placeholder="Observações" required></textarea>
+                <div class="invalid-feedback">
+                    Descreva alguma observação
+                </div>
             </div>
 
-        </div>
+
+        </div><br>
 
         <div class="row g-3">
             <div class="col-1">
@@ -63,7 +85,62 @@
             </div>
 
         </div>
+
     </form>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            const nomeInput = document.querySelector('#nome');
+            const emailInput = document.querySelector('#email');
+            const idadeSelect = document.querySelector('#idade');
+            const obsTextArea = document.querySelector('#obs');
+
+            // Função para verificar e marcar campos válidos
+            function verificarCamposValidos() {
+                if (nomeInput.value.trim() !== '') {
+                    nomeInput.classList.add('is-valid');
+                    nomeInput.classList.remove('is-invalid');
+                } else {
+                    nomeInput.classList.remove('is-valid');
+                    nomeInput.classList.add('is-invalid');
+                }
+
+                if (emailInput.value.trim() !== '') {
+                    emailInput.classList.add('is-valid');
+                    emailInput.classList.remove('is-invalid');
+                } else {
+                    emailInput.classList.remove('is-valid');
+                    emailInput.classList.add('is-invalid');
+                }
+
+                if (idadeSelect.value !== 'opcao') {
+                    idadeSelect.classList.add('is-valid');
+                    idadeSelect.classList.remove('is-invalid');
+                } else {
+                    idadeSelect.classList.remove('is-valid');
+                    idadeSelect.classList.add('is-invalid');
+                }
+
+                if (obsTextArea.value.trim() !== '') {
+                    obsTextArea.classList.add('is-valid');
+                    obsTextArea.classList.remove('is-invalid');
+                } else {
+                    obsTextArea.classList.remove('is-valid');
+                    obsTextArea.classList.add('is-invalid');
+                }
+            }
+
+            // Adicione ouvintes de evento de entrada para cada campo
+            nomeInput.addEventListener('input', verificarCamposValidos);
+            emailInput.addEventListener('input', verificarCamposValidos);
+            idadeSelect.addEventListener('input', verificarCamposValidos);
+            obsTextArea.addEventListener('input', verificarCamposValidos);
+
+            // Marque os campos como inválidos no carregamento da página
+            verificarCamposValidos();
+        });
+    </script>-->
 </body>
 
 </html>
