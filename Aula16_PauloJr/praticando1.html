@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            margin-left: 10%;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 400px;
+            height: 50px;
+            text-align: justify;
+            border: solid blue;
+            background-color: rgb(194, 224, 250);
+        }
+    </style>
+
+    <script>
+        /*Início do Jquery
+        $(document).ready(function(){
+            
+        })*/
+        /*Pedir nome function solicitarNome() {
+            const nome = prompt('Por favor, insira seu nome:');
+            if (nome) {
+                document.getElementById('nome-titulo').textContent = 'Olá, meu nome é ' + nome;
+            }
+        }
+
+        // Chamar a função solicitarNome ao carregar a página
+        window.onload = solicitarNome;*/
+
+        $(document).ready(function () {
+            const nome = prompt('Por favor, insira seu nome:');
+            if (nome) {
+                $("#nome").text("Olá, seja bem vindo " + nome)
+            }
+
+
+       /* function removerParagrafo() {
+            let element = document.getElementById("paragrafos");
+            element.remove();
+        }*/
+       
+        $("#adicionarParagrafo").on("click", function (adicionarPr) {
+        // Cria um novo elemento de parágrafo
+        let novoParagrafo = $("<p>Este é um novo parágrafo!</p>");
+
+        // Adiciona o novo parágrafo à div com o ID "conteudo"
+        $("#paragrafos").append(novoParagrafo);
+    });
+        
+    $("#removerParagrafo").on("click", function(removerPr){
+        $("#paragrafos").empty()
+    })
+        
+
+        })
+    </script>
+</head>
+
+<body>
+    <a href="praticando2.html">p2</a>
+
+    <h1>Praticando 1 - JavaScript</h1>
+
+
+
+
+    <h2 id="nome"></h2>
+
+    <button onclick="addParagrafo()" id="adicionarParagrafo">Adicionar Parágrafo (Este é um novo parágrafo)</button><br>
+    <button onclick="removerParagrafo()" id="removerParagrafo">Remover Parágrafo (Remover todos os parágrafos)</button>
+
+    <div id="paragrafos">
+
+</body>
+
+</html>

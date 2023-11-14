@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    .caixa {
+            width: 200px;
+            height: 70px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: solid black;
+        }
+
+        #reset {
+            width: 100px;
+            margin: 40px;
+        }
+
+        #preview {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            text-align: center;
+            font-size: 80px;
+            padding-top: 20%;
+            display: none;
+            z-index: -1;
+        }
+</style>
+
+<script>
+    
+</script>
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
+        <a href="praticando3.html">
+            p3
+        </a>
+        
+        <div class="row">
+
+            <div class="caixa" id="d1" style="background-color: green;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d2" style=" background-color: yellow;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d3" style="background-color: blue;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d4" style="background-color: turquoise;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+            <div class="caixa" id="d5" style="background-color: orange;" onmouseover="mostrarPreview(this)"
+                onclick="mudarCorFundo(this)"> </div>
+
+            <div onclick="resetarCorFundo()" id="reset"><button>Reset</button></div>
+        </div>
+
+    </div>
+
+
+    <div id="preview"><h2>Preview</h2></div>
+
+</body>
+</html>
