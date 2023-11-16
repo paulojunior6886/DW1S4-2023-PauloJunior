@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
     <style>
     .caixa {
             width: 200px;
@@ -38,9 +41,7 @@
         }
 </style>
 
-<script>
-    
-</script>
+
 
 </head>
 <body>
@@ -49,6 +50,9 @@
         <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
         <a href="praticando3.html">
             p3
+        </a>
+        <a href="praticando1.html">
+            p1
         </a>
         
         <div class="row">
@@ -72,5 +76,54 @@
 
     <div id="preview"><h2>Preview</h2></div>
 
+
+    <script>
+        /*var corOriginal = document.body.style.backgroundColor;
+
+        function mudarCorFundo(element) {
+            document.body.style.backgroundColor = element.style.backgroundColor;
+            
+        }
+
+        function mostrarPreview(element) {
+            var preview = document.getElementById("preview");
+            preview.innerText = "Preview";
+            preview.style.backgroundColor = element.style.backgroundColor;
+            preview.style.display = "block";
+        }
+
+        function resetarCorFundo() {
+            document.body.style.backgroundColor = corOriginal;
+        }
+
+        document.body.onmouseout = function () {
+            var preview = document.getElementById("preview");
+            preview.style.display = "none";
+        }*/
+
+    
+    var corOriginal = $("body").css("background-color");
+
+    function mudarCorFundo(element) {
+        $("body").css("background-color", $(element).css("background-color"));
+    }
+
+    function mostrarPreview(element) {
+        var preview = $("#preview");
+        preview.text("Preview");
+        preview.css("background-color", $(element).css("background-color"));
+        preview.css("display", "block");
+    }
+
+    function resetarCorFundo() {
+        $("body").css("background-color", corOriginal);
+    }
+
+    $(document).ready(function () {
+        $("body").mouseout(function () {
+            $("#preview").css("display", "none");
+        });
+    });
+    </script>
 </body>
 </html>
