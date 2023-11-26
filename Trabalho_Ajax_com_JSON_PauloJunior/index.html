@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
     <style>
         h3 {
             margin-left: 70%;
@@ -29,9 +29,23 @@
         #btnS {
             margin-left: 0%;
         }
-        #table{
+
+        #table {
             margin-top: 24px;
             margin-left: 20px;
+        }
+
+        #mensagem {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: #fff;
+            z-index: 1000;
         }
     </style>
 
@@ -42,10 +56,11 @@
     <br>
     <h3>Nome: Paulo Junior</h3>
     <hr>
+    
     <div class="container" id="divPr">
 
         <div class="row g-3">
-            <form class="was-validated col-3">
+            <form id="form1" class="was-validated col-3">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" class="form-control" required>
                 <div class="invalid-feedback">
@@ -53,56 +68,137 @@
                 </div>
                 <br>
 
-                <label for="telefone">Telefone:</label><br>
-                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(xx)xxxxx-xxxx"
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@example.com"
                     required>
                 <div class="invalid-feedback">
-                    Insira seu telefone
+                    Insira seu email
                 </div><br>
 
                 <div class="row" id="btnSD">
                     <div class="col-3" id="btnS">
-                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-primary" onclick="salvarDados()">Salvar</button>
                     </div>
                     <div class="col-1" id="btnD">
-                        <button type="reset" class="btn btn-warning">Apagar</button>
+                        <button type="reset" class="btn btn-warning" onclick="fecharMensagem()">Apagar</button>
                     </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">Atualizar dados tabela</button>
+                <button type="button" class="btn btn-primary" onclick="atualizarTabela()">Atualizar dados tabela</button>
             </form>
 
             <div class="col-8 text-start">
-                
+
                 <table class="table table-striped" id="table">
                     <thead class="table table-dark table-striped">
                         <tr>
                             <th scope="col">Nome</th>
-                            <th scope="col">E-mail</th>
+                            <th scope="col">Email</th>
                             <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">Paulo</td>
-                            <td>paulojunior6886@gmail.com</td>
-                            <td class="text-end"><button type="button" class="btn btn-danger">Apagar</button></td>
-                        </tr>
-                        <tr>
-                            <td scope="row">2</td>
-                            <td>Jacob</td>
-                            <td class="text-end"><button type="button" class="btn btn-danger">Apagar</button></td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3</td>
-                            <td>Larry</td>
-                            <td class="text-end"><button type="button" class="btn btn-danger">Apagar</button></td>
-                        </tr>
+                        <!-- Os dados da tabela serão inseridos aqui -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+    <div id="mensagem"></div>
+
+    <script>
+// Função para listar os dados ao abrir a página
+        $(document).ready(function () {
+            atualizarTabela();
+        });
+
+        function salvarDados() {
+    var nome = $("#nome").val();
+    var email = $("#email").val();
+
+// Faz a requisição Ajax para inserir os dados
+    $.ajax({
+        type: "POST",
+        url: "https://epansani.com.br/2023/dw1s4/ajax/ins.php",
+        data: { nome: nome, email: email },
+        success: function (data) {
+            adicionarLinhaTabela(data.id, nome, email);
+            limparCamposFormulario();
+            mostrarMensagem('Dados salvos com sucesso!', 'success');
+            atualizarTabela();
+        }
+    });
+}
+
+//Função de adicionar as linhas da tabela, a tendência é de adicionar após o ultimo dado adicionado.
+function adicionarLinhaTabela(id, nome, email) {
+    var newRow = $("<tr>");
+
+    newRow.append('<td>' + nome + '</td>');
+    newRow.append('<td>' + email + '</td>');
+    newRow.append('<td class="text-end"><button type="button" class="btn btn-danger" onclick="apagarLinha(this, ' + id + ')">Apagar</button></td>');
+
+    $("#table tbody").append(newRow);
+}
+
+// Botão para atualizar "listar" os dados atuais da tabela.
+        function atualizarTabela() {
+            $.ajax({
+                type: "GET",
+                url: "https://epansani.com.br/2023/dw1s4/ajax/list.php",
+                success: function (data) {
+                    $("#table tbody").empty();
+
+                    $.each(data, function (index, value) {
+                        adicionarLinhaTabela(value.id, value.nome, value.email);
+                    });
+                },
+                dataType: "json"
+            });
+        }
+
+// Função para apagar os dados e a linha da tabela clicando no botão excluir        
+        function apagarLinha(btn, id) {
+            if (confirm('Tem certeza que deseja excluir este dado?')) {
+                var row = $(btn).closest("tr");
+                row.remove();
+                mostrarMensagem('Dado excluído com sucesso!', 'success');
+
+                $.ajax({
+                    type: "POST",
+                    url: "https://epansani.com.br/2023/dw1s4/ajax/rem.php",
+                    data: { id: id },
+                    success: function (data) {
+                        console.log("Resposta do servidor após exclusão:", data);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Erro na requisição Ajax de exclusão:", status, error);
+                    }
+                });
+            }
+        }
+
+        function mostrarMensagem(mensagem, tipo) {
+            var mensagemDiv = $("#mensagem");
+            mensagemDiv.text(mensagem);
+            mensagemDiv.removeClass().addClass('alert alert-' + tipo);
+            mensagemDiv.fadeIn();
+
+            setTimeout(function () {
+                fecharMensagem();
+            }, 5000);
+        }
+
+        function fecharMensagem() {
+            $("#mensagem").fadeOut();
+        }
+
+        function limparCamposFormulario() {
+            $("#nome").val('');
+            $("#email").val('');
+        }
+    </script>
 
 </body>
 
